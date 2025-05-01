@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thérapie par Contrainte Induite | Rééducation Hémiplegie</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      :root {
+        --primary: #0b3d91;
+        --secondary: #1a4fb3;
+        --accent: #f72585;
+        --light: #f8f9fa;
+        --dark: #212529;
+        --gray: #6c757d;
+        --font-main: "Montserrat", sans-serif;
+        --font-heading: "Poppins", sans-serif;
+      }
+
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@600;700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: var(--font-main);
+        color: var(--dark);
+        line-height: 1.7;
+        background-color: white;
+        overflow-x: hidden;
+      }
+
+      header {
+        background: white;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+      }
+
+      nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1.5rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 1.8rem;
+        color: var(--primary);
+      }
+
+      .bg {
+        display: flex;
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 1rem;
+        background: linear-gradient(to right, #0b3d91, #3ba0f2);
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-family: var(--font-heading);
+        font-size: 2.8rem;
+        margin-bottom: 1.5rem;
+        color: var(--light);
+        line-height: 1.2;
+      }
+
+      .hero p {
+        max-width: 700px;
+        margin: 0 auto;
+        font-size: 1.2rem;
+        color: var(--light);
+      }
+
+      .section {
+        max-width: 1000px;
+        margin: 5rem auto;
+        padding: 0 2rem;
+      }
+
+      .section-title {
+        font-family: var(--font-heading);
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: var(--primary);
+        position: relative;
+        display: inline-block;
+      }
+
+      .section-title:after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 60%;
+        height: 4px;
+        background: var(--accent);
+        border-radius: 2px;
+      }
+
+      .card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        padding: 2.5rem;
+        margin-bottom: 3rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      }
+
+      .card h3 {
+        font-family: var(--font-heading);
+        color: var(--secondary);
+        margin-bottom: 1.2rem;
+        font-size: 1.5rem;
+      }
+
+      .highlight-box {
+        background: linear-gradient(to right, #f8f9fa, #e9f5ff);
+        border-left: 4px solid var(--primary);
+        padding: 1.5rem;
+        margin: 2rem 0;
+        border-radius: 0 8px 8px 0;
+      }
+
+      .figure-container {
+        text-align: center;
+        margin: 2rem 0;
+      }
+
+      .figure-img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      .figure-caption {
+        font-size: 0.9rem;
+        color: var(--gray);
+        margin-top: 0.5rem;
+      }
+
+      .stats {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .stat-item {
+        text-align: center;
+        padding: 1.5rem;
+        background: #f1f5f9;
+        border-radius: 12px;
+        width: 200px;
+      }
+
+      .stat-number {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+      }
+
+      footer {
+        background: var(--primary);
+        color: white;
+        padding: 2rem;
+        text-align: center;
+        margin-top: 5rem;
+      }
+
+      .footer-content h3 {
+        font-family: var(--font-heading);
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">CIMT</div>
+        <div>Guebli Aymen</div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="bg">
+        <img src="./bg-img.png" alt="bg image" />
+      </section>
+      <section class="hero">
+        <h1>La thérapie par le mouvement induit par la contrainte</h1>
+        <p>
+          Une méthode innovante de rééducation du membre supérieur chez l'adulte
+          hémiplégique
+        </p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Introduction</h2>
+
+        <div class="card">
+          <p>
+            La contrainte induite a vu le jour après des observations de
+            non-utilisations de membres parétiques malgré une commande motrice
+            fonctionnelle. E. Taub l'a défini comme étant une « technique de
+            rééducation visant à modifier le comportement du patient vis-à-vis
+            de son membre déficitaire, avec pour objectif de réduire
+            substantiellement les incapacités en augmentant l'utilisation du
+            membre supérieur dans les activités de la vie quotidienne (AVQ) ».
+          </p>
+          <p>
+            La thérapie par contrainte induite consiste en une limitation plus
+            ou moins importante du membre supérieur non-parétique sur un temps
+            d'éveil important. L'utilisation forcée du membre atteint permet de
+            développer sa motricité.
+          </p>
+        </div>
+
+        <div class="stats">
+          <div class="stat-item">
+            <div class="stat-number">50-75%</div>
+            <div>des patients post-AVC</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">Grade B</div>
+            <div>Recommandation HAS</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">3-6 mois</div>
+            <div>Après rééducation</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Principes</h2>
+
+        <div class="card">
+          <p>
+            La thérapie par contrainte induite a pour objectif de lutter contre
+            la sous-utilisation acquise du membre parétique malgré une
+            récupération motrice de celui-ci. Elle cherche à réintégrer le
+            membre lésé dans les gestes quotidiens. Le concept-clé de cette
+            technique est la sous-utilisation acquise ou bien appelée amnésie
+            motrice fonctionnelle ou plus simplement exclusion du membre. Trois
+            théories justifient cette exclusion : l'une prône la déafférentation
+            tandis que la deuxième parle de dysafférentation. Quant à la
+            dernière, elle montre une corrélation entre l'héminégligence
+            corporelle et la sous-utilisation acquise. Aucune n'a, à ce jour, pu
+            être démontrée mais elles ont le mérite de soulever de probables
+            justifications.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card">
+          <h3>
+            Syndrome de déafférentation comme théorie explicative de exclusion
+          </h3>
+
+          <p>
+            Elle fut décrite par E. Taub et ses collaborateurs en 2006. Elle
+            repose sur 3 axes :
+          </p>
+
+          <ul style="margin: 1.5rem 0; padding-left: 2rem">
+            <li style="margin-bottom: 0.8rem">
+              La diminution du mouvement, directement lié à la lésion cérébrale,
+              amène à une réduction de la représentation corticale. Les
+              mouvements se font alors plus difficilement et avec plus
+              d’imprécisions. L’explication viendrait de l’inhibition
+              interhémisphérique (figure 1). Dans le cas d’un AVC, le côté
+              ipsilatéral à la lésion ne pourrait plus tenir en échec
+              l’inhibition de l’hémisphère controlatéral. L’expression motrice
+              du membre parétique serait alors inhibée dès l’initialisation par
+              l’hémisphère sain.
+            </li>
+            <li>
+              Les échecs répétés dans les tâches de la vie quotidienne
+              (improductivité du mouvement, douleurs, non-coordination, etc.)
+              concourent à une utilisation préférentielle du membre
+              controlatéral. E. Taub et ses collaborateurs ont observé des
+              singes déafférentés qui essayaient d’utiliser leur membre
+              hémiplégique sans réussite juste après l’opération. Après des
+              pertes d’équilibre, des chutes et des lâchages de nourriture, les
+              singes ont appris à ne plus utiliser leur bras hémiplégique.
+            </li>
+            <li>
+              Le dernier axe repose sur une mise en place de comportements de
+              compensation plus efficaces et plus économiques en énergie et en
+              attention. Cette mise en place participerait à l’augmentation de
+              la représentation corticale du membre supérieur non-atteint au
+              détriment du membre parétique de par la sur-utilisation de ce
+              membre. Cela se rapporte à la plasticité cérébrale.
+            </li>
+          </ul>
+
+          <!-- الصورة الأولى -->
+          <div class="figure-container">
+            <img
+              src="./img_1.png"
+              alt="Schéma de l'inhibition interhémisphérique"
+              class="figure-img"
+            />
+            <p class="figure-caption">
+              Figure 1 - Schéma sur une coupe frontale expliquant l'inhibition
+              interhémisphérique
+            </p>
+          </div>
+
+          <!-- الصورة الثانية -->
+          <div class="figure-container">
+            <img
+              src="./img_2.png"
+              alt="Développement de la sous-utilisation acquise"
+              class="figure-img"
+            />
+            <p class="figure-caption">
+              Figure 2 - Développement de la sous-utilisation acquise
+            </p>
+          </div>
+
+          <p>
+            La figure 2 montre la mise en place d’une boucle de désadaptation
+            psychomotrice où l’inutilisation du membre parétique entraine des
+            complications d’utilisation, il sera alors moins utilisé. De plus,
+            les comportements de suppression et de compensation surajoutent des
+            complications à ce phénomène.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card">
+          <h3>
+            Syndrome de dysafférentation comme théorie explicative de l'exclusion
+          </h3>
+
+          <p>
+            Cette hypothèse expliquerait la genèse de la sous-utilisation
+            acquise . Selon Paillard, un « mouvement volontaire nécessite une
+            initialisation, une planification, une programmation puis une
+            exécution ». En outre, les différentes sensibilités concourent à la
+            finesse du mouvement et à sa temporalité.Ce syndrome de
+            dysafférentation aurait comme origine une altération de la boucle
+            sensori-motrice. L’initialisation, la planification et/ou la
+            programmation seraient perturbées.
+          </p>
+
+          <div class="highlight-box">
+            <p>
+              <span style="color: var(--primary); font-weight: 600">
+                Altération de la boucle sensori-motrice : </span
+              ><br />
+              Elle proviendrait d'une incohérence du message sensitif dans le
+              lobe pariétal primaire. L'aire associative (rôle de décryptage de
+              l'information), devant des messages inhabituels, en transmet un,
+              moteur, qu'elle croit adapté.
+              <br />
+              Il serait une sous-utilisation (voire une exclusion) du membre
+              parétique. Les troubles de la sensibilité, associés à ce
+              dysfonctionnement pariétal, viendraient renforcer l'incohérence du
+              message sensitivo-moteur.
+            </p>
+          </div>
+
+          <p></p>
+
+          <div class="highlight-box">
+            <p>
+              <span style="color: var(--primary); font-weight: 600"
+                >Relation entre exclusion et troubles du schéma corporel :</span
+              ><br />
+              Le	schéma	corporel	est	selon	Schilder	« la	représentation	que	chacun	a	de	son	propre	corps,	
+qu’il	soit	immobile	ou	en	mouvement	dans	l’espace ».	Le	schéma	moteur	est, quant	à	lui,	un	
+concept	 dynamique	 qui	 correspond	 à	 la	 représentation	mentale	 du	mouvement.	Un	mouvement	volontaire	nécessite	une	conscience	des	segments	de	son	corps et	de	schémas	corporels	 (constitués	 pendant	 la	 petite	 enfance).	 Le	 concept	 de	 « contrôle	 cortical	 moteur »
+[14] associe ces représentations	 du	 corps	 (phénomènes	 intrinsèques)	 à	 l’environnement,	
+permettant	ainsi	de	prédire	une réponse	motrice	adaptée.	Ensuite,	un	système	de	contrôle
+(le	cervelet) compare	cette	réponse prédite à	la	commande	motrice	nécessaire	à	sa	réalisation.	Le « contrôle	cortical	moteur » produit	alors	une	commande	motrice	efficiente,	qui	allie	
+les	schémas	pré-existants	et	l’adaptation	nécessaire	pour	l’inclusion	dans	un	environnement	
+spécifique.
+Cette prédiction	 est	 appelée	 « copie	 efférente ».	 Elle	 est	 une	 extrapolation	 des	 conséquences	de	la	commande	motrice	sur	le	mouvement	à	venir.	Lors	de	la	réalisation	du	mouvement,	 cette	 copie	 est	 comparée	 au	 feedback	 sensoriel,	 permettant	 ainsi de	 modifier	 la	
+commande motrice (mécanisme	d’asservissement).	Dans	le	cas	des	AVC,	ces	feedbacks	sensoriels	peuvent	être	perturbés	voire	abolis. Cela	concoure	à	la	modification	du	schéma	corporel	du	patient	hémiplégique. Ces	troubles	du	schéma	corporel induisent	donc	une	réponse	
+motrice	inadaptée	aux	stimuli extrinsèques,	concourant	à	une	exclusion	du	membre.
+              
+          </div>
+
+          <div class="highlight-box">
+            <span style="color: var(--primary); font-weight: 600"
+                >Relation entre douleur et exclusion :</span
+              ><br />
+              La douleur est définie par l’association internationale pour
+              l’étude de la douleur (IASP) comme « une expérience sensorielle et
+              émotionnelle désagréable, associée à un dommage tissulaire présent
+              ou potentiel, ou décrite en termes d’un tel dommage ». Elle a un
+              rôle de signal d’alarme mais peut se pérenniser et devenir une
+              douleur chronique alors que la cause initiale de cette douleur
+              n’est plus. En lien avec les schémas corporels, le concept de «
+              contrôle cortical moteur » englobe la nociception. En effet, la
+              copie efférente anticipe le mouvement ainsi que les feedbacks
+              senso-riels à venir. Si le mouvement prédit est douloureux, il
+              sera alors évité. Cela pouvant donc amener à une sous-utilisation
+              voire à une exclusion du membre.
+            </p>
+              
+          </div>
+
+          <h3>Analogie entre l'héminégligence corporelle et l'exclusion</h3>
+
+          <p>
+            L’héminégligence corporelle est un trouble de l‘orientation de
+            l’attention vers un membre, un hémicorps, etc. d’origine centrale.
+            Si les deux autres théories avaient comme base la dysfonction, voire
+            l’absence, d’afférence sensori-motrice, celle-ci repose sur un
+            déficit attentionnel . <br>
+             Nous retrouverons une difficulté au
+            désencrage automatique du côté lésionnel (lésion cérébrale) et une
+            impossibilité d’orientation attentionnelle vers le côté
+            non-lésionnel . Le phénomène d’héminégligence se retrouve le plus
+            souvent après un AVC dans les territoires de l’artère cérébrale
+            moyenne ou de l’artère cérébrale postérieure de l’hémisphère
+            nondominant.
+            <br> L’héminégligence peut se manifester par sa composante
+            attentionnelle où le patient ne pourra réagir ou orienter son
+            attention vers des stimuli sensoriels dans son hémi-espace
+            controlatéral à la lésion cérébrale. <br> Elle présente également une
+            composante motrice qui peut amener à une sous-utilisation du membre
+            supérieur controlatéral à la lésion (négligence motrice). De ce
+            fait, la différenciation entre l’héminégligence et l’exclusion
+            réelle du membre devient difficile. <br> Néanmoins, l’héminégligence peut
+            être améliorée par une approche « top-down » (action de la
+            conscience sur la motricité) en agissant sur la conscience du
+            déficit par des procédés de feedback. <br> L’approche « bottom-up »,
+            quant à elle, vise à modifier les représentations corticales de
+            l’espace et du corps du sujet par des techniques sensori-motrices
+            (comme la mobilisation). Par cette analogie entre l’héminégligence
+            corporelle et l’exclusion du membre, cette dernière serait
+            rééducable par ces deux approches. <br> De ce fait, nous pourrions
+            considérer le phénomène d’exclusion comme un comportement de
+            négligence dont l’origine lésionnelle est périphérique (renvoie à la
+            dysafférentation) et le mécanisme fonctionnel est central. <br> Nous
+            pourrions donc considérer que l’exclusion serait un trouble
+            attentionnel d’origine périphérique.
+          </p>
+
+          <div class="highlight-box">
+            <p>
+              L'approche « top-down » (action de la conscience sur la motricité)
+              et « bottom-up » (techniques sensori-motrices) permettent toutes
+              deux de lutter contre l'exclusion.
+            </p>
+          </div>
+
+          <h3>Action de thérapie par contrainte induite</h3>
+
+          <p>
+            La thérapie par contrainte induite ou Constraint-Induced Movement
+            Therapy (CIMT), cherche à agir sur le phénomène d'exclusion. Nous
+            allons faire des liens avec les trois théories explicatives de la
+            sous-utilisation acquise.
+          </p>
+
+          <div class="stats" style="margin: 30px 0">
+            <div class="stat-item">
+              <div class="stat-number">Top-down</div>
+              <div>Approche cognitive</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">Bottom-up</div>
+              <div>Approche sensorimotrice</div>
+            </div>
+          </div>
+
+          <h4>L'incidence inhibitrice de la CIMT :</h4>
+
+          <p>
+            L’objectif de la contrainte est de bloquer ou de limiter les
+            mouvements du membre supérieur non-atteint. Dans la théorie de
+            déafférentation de E. Taub, la contrainte cherche à rompre les
+            comportements de compensation qui s’opèrent du côté homolatéral à la
+            lésion cérébrale. Le patient n’a alors qu’un seul choix, utiliser
+            son membre parétique, permettant ainsi une inhibition de l’activité
+            de l’hémisphère controlatéral à la lésion. Cette inhibition permet
+            de lever en partie l’emprise que l’hémisphère sain a sur son
+            homologue lésé. Pour la théorie de dysafférentation, cette
+            contrainte permet de lever l’utilisation préférentielle du côté
+            ipsilatéral à la lésion dans les tâches de la vie quotidienne. Cela
+            agirait sur les schémas moteurs et plus particulièrement sur la
+            planification du mouvement, afin de redonner une spontanéité
+            d’utilisation du membre parétique. En ce qui concerne la théorie
+            attentionnelle, la sous sollicitation du membre sain par la
+            contrainte permet de lever les coûts attentionnels dont le patient a
+            besoin pour mouvoir et ressentir son membre supérieur non-atteint.
+            Libérant ainsi des capacités d’attention qui permettent une approche
+            « top-down ».
+          </p>
+
+          <h4>L'incidence excitatrice de la CIMT :</h4>
+
+          <p>
+            Cette composante repose sur l’intensité d’une rééducation et sur la
+            répétition de tâches orientées . Dans la théorie de déafférentation,
+            cette composante va à l’encontre des comportements de suppression de
+            capacités et induit plus de mouvements. Cela favorise une meilleure
+            représentation corticale du membre parétique et favorise
+            l’inhibition de l’hémisphère controlatéral à la lésion par
+            l’excitation de l’hémisphère lésé. Le but est donc de stimuler
+            l’hémisphère lésé afin de retrouver un équilibre entre les deux.
+            Pour la théorie de dysafférentation, l’utilisation intensive du
+            membre parétique induit de nouveaux feedbacks sensoriels, amenant un
+            affinement des schémas moteurs, tant au niveau des afférences
+            sensitives que de la commande motrice. En ce qui concerne le déficit
+            attentionnel, cette composante excitatrice de la CIMT amène le
+            patient à se focaliser sur son membre parétique, stimulant ainsi ses
+            capacités attentionnelles centrées sur ce membre atteint.
+          </p>
+
+          <div class="highlight-box">
+            <p>
+              En résumé, la thérapie par contrainte induite oriente la
+              plasticité cérébrale vers un nouvel équilibre entre les deux
+              représentations corticales. Elle a pour but de réintégrer le
+              membre supérieur dans les activités de la vie quotidienne du
+              patient avec un objectif purement fonctionnel. C’est une thérapie
+              comportementale qui vise à changer l’attitude du patient envers
+              son membre parétique.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+
+        <div class="card">
+          <h3> Différentes contraintes</h3>
+
+          <p>
+            Il est important de préciser que la contrainte doit pouvoir être
+            retirée par le patient, et ce à n'importe quel moment, pour des
+            soucis de sécurité. Pour comparer les différentes incidences des
+            contraintes sur le membre supérieur sain, nous allons utiliser le
+            Motor Assessment Scale (MAS) car elle est reconnue par l'HAS dans le
+            cadre de la prise en charge d'un AVC et qu'elle reste facilement
+            reproductible (nécessité de petits matériels).
+          </p>
+
+          <div class="highlight-box">
+            <p>
+              Dans cette échelle, trois catégories nous intéressent plus
+              particulièrement : la fonction du membre supérieur, les mouvements
+              et les activités fines de la main. Chacune de ces catégories sont
+              cotées de 0 à 6.
+            </p>
+          </div>
+
+          <p>
+            Le choix de la contrainte dépend des objectifs thérapeutiques
+            émanant du masseur-kinésithérapeute. Il a été cependant montré que
+            la restriction de la main était plus efficace que la contrainte
+            prenant le membre supérieur dans sa globalité. Il existe autant de
+            contraintes que de patients mais cinq ressortent de la littérature,
+            que nous allons classer de la plus à la moins contraignante :
+          </p>
+
+          <ol style="margin: 1.5rem 0; padding-left: 2rem">
+            <li style="margin-bottom: 0.8rem">Un mayo-clinic</li>
+            <li style="margin-bottom: 0.8rem">
+              Un manchon avec le coude au corps
+            </li>
+            <li style="margin-bottom: 0.8rem">Une écharpe</li>
+            <li style="margin-bottom: 0.8rem">Une moufle</li>
+            <li>Un élastique autour des doigts II à V</li>
+          </ol>
+        </div>
+
+          <div class="card">
+            <h3>Différents exercices</h3>
+          
+            <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0">
+              <thead>
+                <tr style="background-color: #f1f5f9">
+                  <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Exercice</th>
+                  <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Description</th>
+                  <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Tâches de modelage</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="padding: 12px; border: 1px solid #ddd;">Mini Solitaire</td>
+                  <td style="padding: 12px; border: 1px solid #ddd;">Tâche de dextérité axée sur la prise en pince – ramasser et déplacer de petits chevilles entre les trous d'un plateau.</td>
+                  <td style="padding: 12px; border: 1px solid #ddd;">Augmenter la vitesse en chronométrant, changer la hauteur du plateau, changer la distance du patient.</td>
+                </tr>
+                <tr style="background-color: #f9f9f9">
+                  <td style="padding: 12px; border: 1px solid #ddd;">Ramasser les bâtons</td>
+                  <td style="padding: 12px; border: 1px solid #ddd;">Tâche de dextérité axée sur la précision de la prise en pince – essayer de ramasser les bâtons sans faire bouger les autres.</td>
+                  <td style="padding: 12px; border: 1px solid #ddd;">Vitesse, changer la distance déplacée, changer la taille des bâtons.</td>
+                </tr>
+                <tr>
+                  <td style="padding: 12px; border: 1px solid #ddd;">Compteurs et pot</td>
+                  <td style="padding: 12px; border: 1px solid #ddd;">Ramasser des jetons d'un pot et les placer sur la table, et vice-versa.</td>
+                  <td style="padding: 12px; border: 1px solid #ddd;">Changer la hauteur du pot, vitesse, type de jeton, distance du pot au patient.</td>
+                </tr>
+                <tr style="background-color: #f9f9f9">
+                  <td style="padding: 12px; border: 1px solid #ddd;">Compteurs</td>
+                  <td style="padding: 12px; border: 1px solid #ddd;">Manipulation en main – ramasser un compteur à la fois, augmenter progressivement le nombre tenu en main.</td>
+                  <td style="padding: 12px; border: 1px solid #ddd;">Utiliser des pièces ou jetons plus petits, relâcher dans une cible, changer la distance du patient.</td>
+                </tr>
+                <tr>
+                  <td style="padding: 12px; border: 1px solid #ddd;">Écrou et boulon</td>
+                  <td style="padding: 12px; border: 1px solid #ddd;">Presser des ailes sur des écrous, visser et dévisser.</td>
+                  <td style="padding: 12px; border: 1px solid #ddd;">Vitesse, utiliser écrou standard, distance de pression du patient.</td>
+                </tr>
+                <tr style="background-color: #f9f9f9">
+                  <td style="padding: 12px; border: 1px solid #ddd;">Cartes</td>
+                  <td style="padding: 12px; border: 1px solid #ddd;">Retourner des cartes à jouer individuelles.</td>
+                  <td style="padding: 12px; border: 1px solid #ddd;">Vitesse, distance du paquet, taille des cartes, poser individuellement ou en pile.</td>
+                </tr>
+                <tr>
+                  <td style="padding: 12px; border: 1px solid #ddd;">Billes</td>
+                  <td style="padding: 12px; border: 1px solid #ddd;">Manipulation en main – comme la tâche des compteurs.</td>
+                  <td style="padding: 12px; border: 1px solid #ddd;">Utiliser différentes tailles/formes (par ex. stylos, trombones).</td>
+                </tr>
+                <tr style="background-color: #f9f9f9">
+                  <td style="padding: 12px; border: 1px solid #ddd;">Clés</td>
+                  <td style="padding: 12px; border: 1px solid #ddd;">Manipulation de clés pour ouvrir des placards/tiroirs à différentes hauteurs.</td>
+                  <td style="padding: 12px; border: 1px solid #ddd;">Commencer avec placards bas, augmenter, varier nombre de clés, vitesse, distance du patient.</td>
+                </tr>
+                <tr>
+                  <td style="padding: 12px; border: 1px solid #ddd;">Écriture</td>
+                  <td style="padding: 12px; border: 1px solid #ddd;">Prise d'écriture.</td>
+                  <td style="padding: 12px; border: 1px solid #ddd;">Suivre modèle avec index, utiliser lettres/motifs plus larges, labyrinthes.</td>
+                </tr>
+                <tr style="background-color: #f9f9f9">
+                  <td style="padding: 12px; border: 1px solid #ddd;">Placard et réfrigérateur</td>
+                  <td style="padding: 12px; border: 1px solid #ddd;">Ouvrir et fermer les placards/réfrigérateurs, charger/décharger.</td>
+                  <td style="padding: 12px; border: 1px solid #ddd;">Commencer par étagères basses, augmenter, varier taille/poids/forme, distance du patient.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+        <div class="card">
+          <h3> Mayo-clinic</h3>
+
+          <p>
+            Ce type de contention est réalisé, sur le membre supérieur sain, par
+            un personnel soignant à partir d'un jersey, de mousse et d'accroche
+            type épingle à nourrice. Nous la comparons avec les trois critères
+            de l'échelle MAS :
+          </p>
+
+          <table
+            style="width: 100%; border-collapse: collapse; margin: 1.5rem 0"
+          >
+            <thead>
+              <tr style="background-color: #f1f5f9">
+                <th
+                  style="
+                    padding: 12px;
+                    text-align: left;
+                    border: 1px solid #ddd;
+                  "
+                >
+                  Critère MAS
+                </th>
+                <th
+                  style="
+                    padding: 12px;
+                    text-align: left;
+                    border: 1px solid #ddd;
+                  "
+                >
+                  Cotation
+                </th>
+                <th
+                  style="
+                    padding: 12px;
+                    text-align: left;
+                    border: 1px solid #ddd;
+                  "
+                >
+                  Explication
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  Fonction du membre supérieur
+                </td>
+                <td style="padding: 12px; border: 1px solid #ddd">0</td>
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  Extension du coude impossible
+                </td>
+              </tr>
+              <tr style="background-color: #f9f9f9">
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  Mouvements de la main
+                </td>
+                <td style="padding: 12px; border: 1px solid #ddd">3</td>
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  Extension et inclinaison radiale du poignet possibles
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  Activités fines
+                </td>
+                <td style="padding: 12px; border: 1px solid #ddd">1</td>
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  Exploration de l'espace limitée
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>
+            L'impotence fonctionnelle générée par cette contrainte est donc
+            quasi-totale, le membre sain est inutilisable pour les réactions
+            d'équilibration, l'exploration de l'espace est impossible. Seule la
+            préhension subsiste, à condition de positionner l'objet à la
+            proximité immédiate de la main.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3> Manchon coude au corps</h3>
+
+          <p>
+            Orthèse vendue en pharmacie correspondant à deux sangles : l'une
+            permettant de soutenir le membre supérieur contre la pesanteur et la
+            seconde ayant pour but de maintenir le bras le long du corps.
+          </p>
+
+          <table
+            style="width: 100%; border-collapse: collapse; margin: 1.5rem 0"
+          >
+            <thead>
+              <tr style="background-color: #f1f5f9">
+                <th
+                  style="
+                    padding: 12px;
+                    text-align: left;
+                    border: 1px solid #ddd;
+                  "
+                >
+                  Critère MAS
+                </th>
+                <th
+                  style="
+                    padding: 12px;
+                    text-align: left;
+                    border: 1px solid #ddd;
+                  "
+                >
+                  Cotation
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  Fonction du membre supérieur
+                </td>
+                <td style="padding: 12px; border: 1px solid #ddd">0</td>
+              </tr>
+              <tr style="background-color: #f9f9f9">
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  Mouvements de la main
+                </td>
+                <td style="padding: 12px; border: 1px solid #ddd">3</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  Activités fines
+                </td>
+                <td style="padding: 12px; border: 1px solid #ddd">1</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>L'impotence fonctionnelle équivaut à celle du mayo-clinic.</p>
+        </div>
+
+        <div class="card">
+          <h3> Écharpe</h3>
+
+          <p>
+            Orthèse également vendue en pharmacie, elle peut aussi être
+            confectionnée par le thérapeute (souvent utilisée dans les hôpitaux
+            publics pour éviter le diastasis de l'épaule hémiplégique).
+          </p>
+
+          <table
+            style="width: 100%; border-collapse: collapse; margin: 1.5rem 0"
+          >
+            <thead>
+              <tr style="background-color: #f1f5f9">
+                <th
+                  style="
+                    padding: 12px;
+                    text-align: left;
+                    border: 1px solid #ddd;
+                  "
+                >
+                  Critère MAS
+                </th>
+                <th
+                  style="
+                    padding: 12px;
+                    text-align: left;
+                    border: 1px solid #ddd;
+                  "
+                >
+                  Cotation
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  Fonction du membre supérieur
+                </td>
+                <td style="padding: 12px; border: 1px solid #ddd">0</td>
+              </tr>
+              <tr style="background-color: #f9f9f9">
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  Mouvements de la main
+                </td>
+                <td style="padding: 12px; border: 1px solid #ddd">3</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  Activités fines
+                </td>
+                <td style="padding: 12px; border: 1px solid #ddd">6</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>
+            L'impotence fonctionnelle qu'impose l'écharpe est moins importante
+            que les deux précédentes. En effet, une exploration de l'espace est
+            possible même si elle reste limitée (au niveau de l'extension de
+            coude).
+          </p>
+        </div>
+
+        <div class="card">
+          <h3> Moufle</h3>
+
+          <p>
+            Outil, semblable à celui que nous utilisons dans la vie quotidienne,
+            qui permet de ne conserver que l'opposition du premier doigt avec
+            les quatre autres et des prises globales.
+          </p>
+
+          <table
+            style="width: 100%; border-collapse: collapse; margin: 1.5rem 0"
+          >
+            <thead>
+              <tr style="background-color: #f1f5f9">
+                <th
+                  style="
+                    padding: 12px;
+                    text-align: left;
+                    border: 1px solid #ddd;
+                  "
+                >
+                  Critère MAS
+                </th>
+                <th
+                  style="
+                    padding: 12px;
+                    text-align: left;
+                    border: 1px solid #ddd;
+                  "
+                >
+                  Cotation
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  Fonction du membre supérieur
+                </td>
+                <td style="padding: 12px; border: 1px solid #ddd">6</td>
+              </tr>
+              <tr style="background-color: #f9f9f9">
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  Mouvements de la main
+                </td>
+                <td style="padding: 12px; border: 1px solid #ddd">5</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  Activités fines
+                </td>
+                <td style="padding: 12px; border: 1px solid #ddd">1</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>
+            L'impotence fonctionnelle est essentiellement liée à l'utilisation
+            de la main saine. Les prises fines sont impossibles ainsi que la
+            dissociation de la main interne et de la main externe.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3> Élastique autour des doigts II à V</h3>
+
+          <p>
+            L'élastique permet de limiter la différenciation des doigts
+            contraints, il préserve la sensibilité superficielle, l'opposition
+            et les prises fines.
+          </p>
+
+          <table
+            style="width: 100%; border-collapse: collapse; margin: 1.5rem 0"
+          >
+            <thead>
+              <tr style="background-color: #f1f5f9">
+                <th
+                  style="
+                    padding: 12px;
+                    text-align: left;
+                    border: 1px solid #ddd;
+                  "
+                >
+                  Critère MAS
+                </th>
+                <th
+                  style="
+                    padding: 12px;
+                    text-align: left;
+                    border: 1px solid #ddd;
+                  "
+                >
+                  Cotation
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  Fonction du membre supérieur
+                </td>
+                <td style="padding: 12px; border: 1px solid #ddd">6</td>
+              </tr>
+              <tr style="background-color: #f9f9f9">
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  Mouvements de la main
+                </td>
+                <td style="padding: 12px; border: 1px solid #ddd">6</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px; border: 1px solid #ddd">
+                  Activités fines
+                </td>
+                <td style="padding: 12px; border: 1px solid #ddd">3</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>
+            L'impotence fonctionnelle est vraiment minime. La dissociation de la
+            main externe par rapport à la main interne est impossible. Le but de
+            cette contrainte est essentiellement proprioceptif.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3> Incidence fonctionnelle des contraintes</h3>
+
+          <div class="table-responsive">
+            <table class="constraint-table">
+              <thead>
+                <tr>
+                  <th rowspan="2">Contraintes</th>
+                  <th colspan="3">Cotation MAS</th>
+                  <th rowspan="2">Incidence fonctionnelle</th>
+                </tr>
+                <tr>
+                  <th>Fonction du membre supérieur</th>
+                  <th>Mouvements de la main</th>
+                  <th>Activités fines</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Mayo-clinic</strong></td>
+                  <td>0</td>
+                  <td>3</td>
+                  <td>1</td>
+                  <td>Seule la préhension persiste</td>
+                </tr>
+                <tr>
+                  <td><strong>Manchon coude au corps</strong></td>
+                  <td>0</td>
+                  <td>3</td>
+                  <td>1</td>
+                  <td>Similaire au mayo-clinic</td>
+                </tr>
+                <tr>
+                  <td><strong>Écharpe</strong></td>
+                  <td>0</td>
+                  <td>3</td>
+                  <td>6</td>
+                  <td>
+                    Préhension possible ainsi que la prono-supination.
+                    Possibilité de travailler les réactions parachutes du membre
+                    supérieur.
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Moufle</strong></td>
+                  <td>6</td>
+                  <td>5</td>
+                  <td>1</td>
+                  <td>
+                    Exploration du membre supérieur dans l'espace. Activités
+                    bi-manuelles et réactions parachutes possibles.
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Élastique</strong></td>
+                  <td>6</td>
+                  <td>6</td>
+                  <td>3</td>
+                  <td>Rôle essentiellement proprioceptif</td>
+                </tr>
+              </tbody>
+              <caption>
+                Tableau 1 : Tableau récapitulatif des cotations de la MAS pour
+                chaque contrainte avec l'incidence fonctionnelle.
+              </caption>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Exercices et Tâches type: contrainte induite</h2>
+      
+        <div class="card">
+          <div class="table-responsive">
+            <table class="exercise-table" style="width: 100%; border-collapse: collapse; margin: 1.5rem 0">
+              <thead>
+                <tr style="background-color: #f1f5f9">
+                  <th style="padding: 12px; border: 1px solid #ddd">EXERCICE</th>
+                  <th style="padding: 12px; border: 1px solid #ddd">DESCRIPTION</th>
+                  <th style="padding: 12px; border: 1px solid #ddd">TÂCHES DE MODELAGE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="padding: 12px; border: 1px solid #ddd"><strong>Mini Solitaire</strong></td>
+                  <td style="padding: 12px; border: 1px solid #ddd">Tâche de dextérité axée sur la prise en pince - ramasser et déplacer de petites chevilles entre les trous d'un plateau.</td>
+                  <td style="padding: 12px; border: 1px solid #ddd">Augmenter la vitesse en chronométrant, changer la hauteur du plateau (par exemple placer sur un bloc), changer la distance du patient.</td>
+                </tr>
+                <tr style="background-color: #f9f9f9">
+                  <td style="padding: 12px; border: 1px solid #ddd"><strong>Ramasser des bâtons</strong></td>
+                  <td style="padding: 12px; border: 1px solid #ddd">Tâche de dextérité axée sur la précision de la prise en pince, essayer de ramasser les bâtons sans faire bouger les autres.</td>
+                  <td style="padding: 12px; border: 1px solid #ddd">Vitesse, changer la distance déplacée, changer la taille des bâtons (par exemple allumettes).</td>
+                </tr>
+                <tr>
+                  <td style="padding: 12px; border: 1px solid #ddd"><strong>Jetons et pot</strong></td>
+                  <td style="padding: 12px; border: 1px solid #ddd">Ramasser des jetons d'un pot et les placer sur la table et vice versa.</td>
+                  <td style="padding: 12px; border: 1px solid #ddd">Changer la hauteur du pot, vitesse, changer le type de jeton (utiliser des pièces), changer la distance du pot par rapport au patient.</td>
+                </tr>
+                <tr style="background-color: #f9f9f9">
+                  <td style="padding: 12px; border: 1px solid #ddd"><strong>Jetons</strong></td>
+                  <td style="padding: 12px; border: 1px solid #ddd">Manipulation en main - ramasser des jetons un à un, augmenter progressivement le nombre tenu en main - relâcher un à un.</td>
+                  <td style="padding: 12px; border: 1px solid #ddd">Utiliser des pièces ou des jetons plus petits, relâcher dans une cible de taille variable, ramasser à partir de différentes surfaces/conteneurs, distance du patient.</td>
+                </tr>
+                <tr>
+                  <td style="padding: 12px; border: 1px solid #ddd"><strong>Écrou et boulon</strong></td>
+                  <td style="padding: 12px; border: 1px solid #ddd">Presser des ailes sur des écrous, le patient visse l'écrou puis le dévisse.</td>
+                  <td style="padding: 12px; border: 1px solid #ddd">Vitesse, utiliser un écrou standard plutôt qu'un écrou à ailettes, distance de la presse par rapport au patient.</td>
+                </tr>
+                <tr style="background-color: #f9f9f9">
+                  <td style="padding: 12px; border: 1px solid #ddd"><strong>Cartes</strong></td>
+                  <td style="padding: 12px; border: 1px solid #ddd">Retourner des cartes à jouer individuelles.</td>
+                  <td style="padding: 12px; border: 1px solid #ddd">Vitesse, distance du paquet par rapport au patient, taille des cartes, poser individuellement ou en pile.</td>
+                </tr>
+                <tr>
+                  <td style="padding: 12px; border: 1px solid #ddd"><strong>Billes</strong></td>
+                  <td style="padding: 12px; border: 1px solid #ddd">Manipulation en main - comme la tâche des jetons.</td>
+                  <td style="padding: 12px; border: 1px solid #ddd">Utiliser des billes de différentes tailles, utiliser des objets de formes différentes comme des stylos ou des trombones.</td>
+                </tr>
+                <tr style="background-color: #f9f9f9">
+                  <td style="padding: 12px; border: 1px solid #ddd"><strong>Clés</strong></td>
+                  <td style="padding: 12px; border: 1px solid #ddd">Manipulation en main d'une clé pour déverrouiller des placards/tiroirs à différentes hauteurs (mobilisation et force).</td>
+                  <td style="padding: 12px; border: 1px solid #ddd">Commencer par des placards bas et augmenter la hauteur, varier le nombre de clés sur le porte-clés, vitesse, distance du patient par rapport au placard.</td>
+                </tr>
+                <tr>
+                  <td style="padding: 12px; border: 1px solid #ddd"><strong>Écriture</strong></td>
+                  <td style="padding: 12px; border: 1px solid #ddd">Prise d'écriture.</td>
+                  <td style="padding: 12px; border: 1px solid #ddd">Suivre un modèle avec l'index si l'écriture est trop difficile, stylos adaptés, commencer par des motifs/lettres larges et réduire la taille, labyrinthes.</td>
+                </tr>
+                <tr style="background-color: #f9f9f9">
+                  <td style="padding: 12px; border: 1px solid #ddd"><strong>Placard et réfrigérateur</strong></td>
+                  <td style="padding: 12px; border: 1px solid #ddd">Ouvrir et fermer des placards/réfrigérateur et charger/décharger des objets.</td>
+                  <td style="padding: 12px; border: 1px solid #ddd">Commencer par des étagères/placards bas et augmenter, objets de différentes tailles, poids et formes, varier la distance du patient par rapport au placard.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="figure-caption" style="text-align: center; margin-top: 1rem; color: var(--gray); font-size: 0.9rem">
+            Annexe 1 - Exemples d'exercices
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <h3>Thérapie par Contrainte Induite</h3>
+        <p>Méthode de rééducation validée par la communauté scientifique</p>
+        <p style="margin-top: 2rem">
+          © 2025 Tous droits réservés - Guebli Aymen
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+.constraint-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-main);
+    margin-bottom: 1.5rem;
+  }
+  
+  .constraint-table th, 
+  .constraint-table td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+  }
+  
+  .constraint-table th {
+    background-color: var(--primary);
+    color: white;
+    font-weight: 500;
+  }
+  
+  .constraint-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  
+  .constraint-table tbody tr:hover {
+    background-color: #f1f5f9;
+  }
+  
+  .constraint-table caption {
+    caption-side: bottom;
+    text-align: left;
+    font-style: italic;
+    color: var(--gray);
+    margin-top: 1rem;
+    padding: 0 15px;
+  }
+  
+  @media (max-width: 768px) {
+    .constraint-table {
+      font-size: 0.9rem;
+    }
+    
+    .constraint-table th, 
+    .constraint-table td {
+      padding: 8px 10px;
+    }
+  }
