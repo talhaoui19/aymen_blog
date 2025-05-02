@@ -1,4 +1,206 @@
-.constraint-table {
+:root {
+    --primary: #0b3d91;
+    --secondary: #1a4fb3;
+    --accent: #f72585;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --gray: #6c757d;
+    --font-main: "Montserrat", sans-serif;
+    --font-heading: "Poppins", sans-serif;
+  }
+
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@600;700&display=swap");
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: var(--font-main);
+    color: var(--dark);
+    line-height: 1.7;
+    background-color: white;
+    overflow-x: hidden;
+  }
+
+  header {
+    background: white;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+  }
+
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--primary);
+  }
+
+  .bg {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 1rem;
+    background: linear-gradient(to right, #0b3d91, #3ba0f2);
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--light);
+    line-height: 1.2;
+  }
+
+  .hero p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: var(--light);
+  }
+
+  .section {
+    max-width: 1000px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+  }
+
+  .section-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--primary);
+    position: relative;
+    display: inline-block;
+  }
+
+  .section-title:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60%;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 2px;
+  }
+
+  .card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  @media (max-width:767px) {
+    .card {
+      padding:1.5rem;
+    }
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  }
+
+  .card h3 {
+    font-family: var(--font-heading);
+    color: var(--secondary);
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+  }
+
+  .highlight-box {
+    background: linear-gradient(to right, #f8f9fa, #e9f5ff);
+    border-left: 4px solid var(--primary);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .figure-container {
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .figure-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .figure-caption {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-top: 0.5rem;
+  }
+
+  .stats {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .stat-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: #f1f5f9;
+    border-radius: 12px;
+    width: 200px;
+  }
+
+  .stat-number {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+
+  footer {
+    background: var(--primary);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 5rem;
+  }
+
+  .footer-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+  }
+
+
+.bg {
+    display: flex;
+    justify-content: center;
+  }
+  
+  @media (max-width:991px) {
+    .bg img{
+        width: 100%;
+    }
+  }
+  
+  .constraint-table {
     width: 100%;
     border-collapse: collapse;
     font-family: var(--font-main);
@@ -45,3 +247,20 @@
       padding: 8px 10px;
     }
   }
+
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; 
+    margin: 1rem 0;
+  }
+  
+  .constraint-table {
+    min-width: 600px; 
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+
+  
+
